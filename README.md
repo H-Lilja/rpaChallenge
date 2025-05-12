@@ -38,7 +38,7 @@ python rpaAutomatisation.py
 - Install Docker
             Follow the instructions to install Docker for your platform from the official Docker website:
             Docker Installation Guide: https://docs.docker.com/get-started/get-docker/
-
+- Make sure that Docker is running before continuing
 - Build the Docker Image and run the container
   -To build the Docker image, run the following command in the project directory:
 ```
