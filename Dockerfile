@@ -13,8 +13,7 @@ ENV DISPLAY=:99
 
 #Set working directory
 WORKDIR /app
-RUN chmod -R 755 /app 
-
+RUN chmod -R 755 /app
 
 ENV RUNNING_IN_DOCKER=1
 

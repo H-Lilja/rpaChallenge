@@ -18,11 +18,16 @@ def getEnvironmentDownloadDir():
 def getDriver(downloadDir):
     chromeOptions = Options()
     chromeOptions.add_argument("--headless=new")
+    chromeOptions.add_argument("--no-sandbox")
+    chromeOptions.add_argument("--disable-dev-shm-usage")
+    chromeOptions.add_argument("--disable-gpu")
     # Window size needs only to set for headless mode
     chromeOptions.add_argument("--window-size=1920x1080")
     chromeOptions.add_experimental_option("prefs", {
         "download.default_directory": downloadDir,
         "download.prompt_for_download": False,
+        "directory_upgrade": True,
+        "safebrowsing.enabled": True
     })
     return webdriver.Chrome(options=chromeOptions)
 
